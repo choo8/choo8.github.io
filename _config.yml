@@ -1,0 +1,11 @@
+title: My Study Log
+author: choo8
+description: "A collection of solved exercises from math and computer science textbooks."
+theme: minima
+
+header_pages:
+  - textbooks.md
+
+collections:
+  textbooks:
+    output: true
