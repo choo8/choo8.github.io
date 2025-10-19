@@ -4,9 +4,11 @@ title: "Exercises: Linear Algebra Done Right"
 subject: "Mathematics"
 ---
 
-## Chapter 1: Vector Spaces
+# Chapter 1: Vector Spaces
 
-### Exercise 1.A.1
+## Chapter 1A: \\(\mathbb{R}^n\\) and \\(\mathbb{C}^n\\) 
+
+### Exercise 1A.1
 Show that \\(\alpha + \beta = \beta + \alpha\\) for all \\(\alpha, \beta \in \mathbb{C}\\).
 
 ### Solution:
@@ -20,7 +22,7 @@ $$
 \end{align}
 $$
 
-### Exercise 1.A.2
+### Exercise 1A.2
 Show that \\((\alpha + \beta) + \lambda = \alpha + (\beta + \lambda)\\) for all \\(\alpha, \beta, \lambda \in \mathbb{C}\\).
 
 ### Solution:
@@ -36,7 +38,7 @@ $$
 \end{align}
 $$
 
-### Exercise 1.A.3
+### Exercise 1A.3
 Show that \\((\alpha\beta)\lambda = \alpha(\beta\lambda)\\) for all \\(\alpha, \beta, \lambda \in \mathbb{C}\\).
 
 ### Solution:
@@ -53,7 +55,7 @@ $$
 \end{align}
 $$
 
-### Exercise 1.A.4
+### Exercise 1A.4
 Show that \\(\lambda(\alpha + \beta) = \lambda\alpha + \lambda\beta\\) for all \\(\lambda, \alpha, \beta \in \mathbb{C}\\).
 
 ### Solution:
@@ -69,7 +71,7 @@ $$
 \end{align}
 $$
 
-### Exercise 1.A.5
+### Exercise 1A.5
 Show that for every \\(\alpha \in \mathbb{C}\\), there exists a unique \\(\beta \in \mathbb{C}\\) such that \\(\alpha + \beta = 0\\).
 
 ### Solution:
@@ -113,7 +115,7 @@ $$
 
 and this contradicts the original assumption that for some \\(\alpha \in \mathbb{C}\\), there exists \\(\beta, \lambda \in \mathbb{C}\\) such that \\(\alpha + \beta = 0\\) and \\(\alpha + \lambda = 0\\).
 
-### Exercise 1.A.6
+### Exercise 1A.6
 Show that for every \\(\alpha \in \mathbb{C}\\) with \\(\alpha \neq 0\\), there exists a unique \\(\beta \in \mathbb{C}\\) such that \\(\alpha\beta = 1\\).
 
 ### Solution:
@@ -189,7 +191,7 @@ Since we know that \\(\alpha \neq 0\\), we know that at least \\(a\\) or \\(b\\)
 
 This would mean that \\(c = e\\) and \\(d = f\\), which implies that \\(\alpha = \lambda\\), which contradicts the original assumption that for some \\(\alpha \in \mathbb{C}\\), where \\(\alpha \neq 0\\), there exists \\(\beta, \lambda \in \mathbb{C}\\) such that \\(\alpha\beta = 1\\) and \\(\alpha\lambda = 1\\).
 
-### Exercise 1.A.7
+### Exercise 1A.7
 Show that \\(\frac{-1 + \sqrt{3}i}{2}\\) is a cube root of 1 (meaning that its cube equals 1).
 
 ### Solution:
@@ -204,7 +206,7 @@ $$
 \end{align}
 $$
 
-### Exercise 1.A.8
+### Exercise 1A.8
 Find two distinct square roots of \\(i\\).
 
 ### Solution:
@@ -264,7 +266,7 @@ i &= \frac{\sqrt{2}}{2} + \frac{1}{\sqrt{2}}i \\
 \end{align}
 $$
 
-### Exercise 1.A.9
+### Exercise 1A.9
 Find \\(x \in \mathbb{R}^4\\) such that
 <br><br>
 $$(4,-3,1,7) + 2x = (5,9,-6,8)$$.
@@ -280,7 +282,7 @@ x &= \frac{1}{2}(1,12,-7,1) && \text{ multiplicative inverse in } \mathbb{R} \\
 \end{align}
 $$
 
-### Exercise 1.A.10
+### Exercise 1A.10
 Explain why there does not exist \\(\lambda \in \mathbb{C}\\) such that
 <br><br>
 $$
@@ -334,7 +336,7 @@ $$
 
 Hence, this contradicts the original assumption that there exists some \\(\lambda \in \mathbb{C}\\) such that \\(\lambda(2 - 3i, 5 + 4i, -6 + 7i) = (12 - 5i, 7 + 22i, -32 - 9i)\\).
 
-### Exercise 1.A.11
+### Exercise 1A.11
 Show that \\((x + y) + z = x + (y + z)\\) for all \\(x, y, z \in \mathbb{F}^n\\).
 
 ### Solution
@@ -350,7 +352,7 @@ $$
 \end{align}
 $$
 
-### Exercise 1.A.12
+### Exercise 1A.12
 Show that \\((ab)x = a(bx)\\) for all \\(x \in \mathbb{F}^n\\) and all \\(a, b \in \mathbb{F}\\).
 
 ### Solution
@@ -365,9 +367,108 @@ $$
 \end{align}
 $$
 
-## Chapter 2: Finite-Dimensional Vector Spaces
+### Exercise 1A.13
+Show that \\(1x = x\\) for all \\(x \in \mathbb{F}^n\\).
 
-### Exercise 2.A.1
+### Solution
+$$
+\begin{align}
+1x &= 1(x_1, \ldots, x_n) && \\
+    &= (1x_1, \ldots, 1x_n) && \\
+    &= (x_1, \ldots, x_n) && \text{ multiplicative identity on } \mathbb{F} \\
+    &= x
+\end{align}
+$$
+
+### Exercise 1A.14
+Show that \\(\lambda(x + y) = \lambda x + \lambda y\\) for all \\(\lambda \in \mathbb{F}\\) and all \\(x, y \in \mathbb{F}^n\\).
+
+### Solution
+$$
+\begin{align}
+\lambda(x + y) &= \lambda((x_1, \ldots, x_n) + (y_1, \ldots, y_n)) && \\
+                &= \lambda(x_1 + y_1, \ldots, x_n + y_n) && \\
+                &= (\lambda(x_1 + y_n), \ldots, \lambda(x_n + y_n)) && \\
+                &= (\lambda x_1 + \lambda y_1, \ldots, \lambda x_n + \lambda y_n) && \text{ distributive property on } \mathbb{F} \\
+                &= (\lambda x_1, \ldots, \lambda x_n) + (\lambda y_1, \ldots, \lambda y_n) && \\
+                &= \lambda(x_1, \ldots, x_n) + \lambda(y_1, \ldots, y_n) && \\
+                &= \lambda x + \lambda y
+\end{align}
+$$
+
+### Exercise 1A.15
+Show that \\((a + b)x = ax + bx\\) for all \\(a, b \in \mathbb{F}\\) and all \\(x \in \mathbb{F}^n\\).
+
+### Solution
+$$
+\begin{align}
+(a + b)x &= (a + b)(x_1, \ldots, x_n) && \\
+            &= ((a + b)x_1, \ldots, (a + b)x_n) && \\
+            &= (ax_1 + bx_1, \ldots, ax_n + bx_n) && \text{ distributive property on } \mathbb{F} \\
+            &= (ax_1, \ldots, ax_n) + (bx_1, \ldots, bx_n) && \\
+            &= a(x_1, \ldots, x_n) + b(x_1, \ldots, x_n) && \\
+            &= ax + bx
+\end{align}
+$$
+
+## Chapter 1B: Definition of Vector Space
+
+### Exercise 1B.1
+Prove that \\(-(-v) = v\\) for every \\(v \in V\\).
+
+### Solution
+$$
+\begin{align}
+-(-v) &= -(-v) + 0 && \text{ additive identity on } V \\
+        &= -(-v) + (v + -v) && \text{ unique additive inverse on } V \\
+        &= -(-v) + (-v + v) && \text{ commutativity of addition on } V \\
+        &= (-(-v) + -v) + v && \text{ distributive property of } V \\
+        &= v
+\end{align}
+$$
+
+### Exercise 1B.2
+Suppose \\(a \in \mathbb{F}, v \in V\\), and \\(av = 0\\). Prove that \\(a = 0\\) or \\(v = 0\\).
+
+### Solution
+Assume that both \\(a \neq 0\\) and \\(v \neq 0\\),
+<br><br>
+$$
+\begin{align}
+av &= 0 && \\
+a(\frac{1}{a})v &= (\frac{1}{a})0 && \\
+v &= 0 && \text{ multiplicative inverse on } \mathbb{F}
+\end{align}
+$$
+
+Hence, this contradicts the original assumption that both \\(a \neq 0\\) and \\(v \neq 0\\).
+
+### Exercise 1B.3
+Suppose \\(v, w \in V\\). Explain why there exists a unique \\(x \in V\\) such that \\(v + 3x = w\\). 
+
+### Solution
+Suppose there exist \\(x, x' \in V\\) such that \\(v + 3x = w\\) and \\(v + 3x' = w\\).
+<br><br>
+$$
+\begin{align}
+v + 3x &= w && \\
+        &= v + 3x' && \\
+v + 3x + (-v) &= v + 3x' + (-v) && \\
+3x &= 3x' && \text{ additive inverse on } V \\
+(\frac{1}{3})(3x) &= (\frac{1}{3})(3x') && \\
+x &= x' && \text{ multiplicative inverse on } \mathbb{F}
+\end{align}
+$$
+
+Hence, \\(x = x'\\), proving that there exists a unique \\(x \in V\\) such that \\(v + 3x = w\\).
+
+## Chapter 1C: Subspaces
+
+# Chapter 2: Finite-Dimensional Vector Spaces
+
+## Chapter 2A: Span and Linear Independence
+
+### Exercise 2A.1
 Find a list of four distinct vectors in \\(\mathbb{F}^3\\) whose span equals
 $$
 \{(x, y, z) \in \mathbb{F}^3 : x + y + z = 0\}
