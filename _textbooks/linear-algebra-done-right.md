@@ -462,6 +462,94 @@ $$
 
 Hence, \\(x = x'\\), proving that there exists a unique \\(x \in V\\) such that \\(v + 3x = w\\).
 
+### Exercise 1B.4
+The empty set is not a vector space. The empty set fails to satisfy only one of the requirements listed in the defintion of a vector space (1.20). Which one?
+
+### Solution
+The empty set not satisfy the "additive identity" requirement, since \\(0 \notin \emptyset\\).
+
+### Exercise 1B.5
+Show that in the definition of a vector space (1.20), the additive inverse condition can be replace with the condition that
+<br><br>
+\\(0v = 0\\) for all \\(v \in V\\).
+
+Here the 0 on the left side is the number 0, and the 0 on the right side is the additive identity of \\(V\\).
+
+### Solution
+Replacing "additive inverse" condition,
+<br><br>
+$$
+\begin{align}
+0v &= 0 && \\
+(1 + -1)v &= 0 && \text{ additive inverse on } \mathbb{F} \\
+1v + (-1)(v) &= 0 && \text{ distributive property of } V \\
+v + -v &= 0 && \text{ multiplicative inverse on } \mathbb{F}
+\end{align}
+$$
+
+Since \\(-1 \in \mathbb{F}\\), hence we have \\(-v \in V\\), which satisfies the original condition.
+
+### Exercise 1B.6
+Let \\(\infty\\) and \\(-\infty\\) denote two distinct objects, neither of whcih is in \\(\mathbb{R}\\). Define an addition and scalar multiplication on \\(\mathbb{R} \cup \\{ \infty, -\infty \\}\\) as you could guess from the notation. Specifically, the sum and product of two real numbers is as usual, and for \\(t \in \mathbb{R}\\) define
+<br><br>
+$$
+\begin{equation*}
+t\infty = \begin{cases}
+                -\infty & \text{ if } t < 0, \\
+                0 & \text{ if } t = 0, \\
+                \infty & \text{ if } t > 0, 
+            \end{cases} \quad
+t(-\infty) = \begin{cases}
+                -\infty & \text{ if } t < 0, \\
+                0 & \text{ if } t = 0, \\
+                \infty & \text{ if } t > 0,
+            \end{cases}
+\end{equation*}
+$$
+
+and
+<br><br>
+$$
+\begin{align}
+t + \infty &= \infty + t = \infty + \infty = \infty \\
+t + (-\infty) &= (-\infty) + t = (-\infty) + (-\infty) = -\infty\\
+\infty + (-\infty) &= (-\infty) + \infty = 0.
+\end{align}
+$$
+
+With these operations of addition and scalar multiplication, is \\(\mathbb{R} \cup \\{ \infty, -\infty \\}\\) a vector space over \\(\mathbb{R}\\)? Explain.
+
+### Solution
+\\(\mathbb{R} \cup \\{ \infty, -\infty\\}\\) is not a vector space over \\(\mathbb{R}\\).
+<br><br>
+$$
+\begin{align}
+\infty &= \infty + 0 \\
+        &= \infty + (\infty + (-\infty)) \\
+        &= (\infty + \infty) + (-\infty) \\
+        &= \infty + (-\infty) \\
+        &= 0
+\end{align}
+$$
+
+Hence, we can see that the associativity property of addition is not held in \\(\mathbb{R} \cup \\{ \infty, -\infty\\}\\).
+
+### Exercise 1B.7
+Suppose \\(S\\) is a nonempty set. Let \\(V^S\\) denote the set of functions from \\(S\\) to \\(V\\). Define a natural addition and scalar multiplication on \\(V^S\\), and show that \\(V^S\\) is a vector space with these definitions.
+
+### Solution
+
+### Exercise 1B.8
+Suppose \\(V\\) is a real vector space.
+$$
+\begin{itemize}
+    \item \text{The } \textit{complexification } \text{of } V
+    \item asdd
+\end{itemize}
+$$
+
+### Solution
+
 ## Chapter 1C: Subspaces
 
 # Chapter 2: Finite-Dimensional Vector Spaces
