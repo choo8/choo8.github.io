@@ -789,16 +789,62 @@ For each of the following subsets of \\(\mathbb{F}^3\\), determine whether it is
 * \\(\\{(x_1, x_2, x_3) \in \mathbb{F}^3 : x_1 = 5x_3\\}\\)
 
 ### Solution:
-\\((0, 0, 0) \in U\\) since \\(0 + 2(0) + 3(0) = 0\\).
+* \\((0, 0, 0) \in U\\) since \\(0 + 2(0) + 3(0) = 0\\).
 
-For some \\((x, y, z), (a, b, c) \in U\\), \\((x, y, z) + (a, b, c) = (x + a, y + b, z + c)\\), and \\((x + a) + 2(y + b) + 3(z + c) = (x + 2y + 3z) + (a + 2b + 3c) = 0\\).
+    For some \\((x, y, z), (a, b, c) \in U\\), \\((x, y, z) + (a, b, c) = (x + a, y + b, z + c)\\), and \\((x + a) + 2(y + b) + 3(z + c) = (x + 2y + 3z) + (a + 2b + 3c) = 0\\).
 
-For some \\(a \in \mathbb{F}\\) and \\((x, y ,z) \in U\\), \\(a(x, y, z) = (ax, ay, az)\\), and \\((ax) + 2(ay) + 3(az) = a(x + 2y + 3z) = a0 = 0\\).
+    For some \\(a \in \mathbb{F}\\) and \\((x, y ,z) \in U\\), \\(a(x, y, z) = (ax, ay, az)\\), and \\((ax) + 2(ay) + 3(az) = a(x + 2y + 3z) = a0 = 0\\).
 
-Hence, \\(\\{(x_1, x_2, x_3) \in \mathbb{F}^3 : x_1 + 2x_2 + 3x_3 = 0\\}\\) is a subspace of \\(\mathbb{F}^3\\).
+    Hence, \\(\\{(x_1, x_2, x_3) \in \mathbb{F}^3 : x_1 + 2x_2 + 3x_3 = 0\\}\\) is a subspace of \\(\mathbb{F}^3\\).
+
+* \\((0, 0, 0) \notin U\\) because \\(0 + 2(0) + 3(0) \neq 4\\), hence \\(\\{(x_1, x_2, x_3) \in \mathbb{F}^3 : x_1 + 2x_2 + 3x_3 = 4\\}\\) is not a subspace of \\(\mathbb{F}^3\\).
+
+* \\((1, 0, 1) + (0, 1, 0) \notin U\\) because \\((1, 0, 1) + (0, 1, 0) = (1, 1, 1)\\), and \\((1)(1)(1) \neq 0\\), hence \\(\\{(x_1, x_2, x_3) \in \mathbb{F}^3 : x_1x_2x_3 = 0\\}\\) is not a subspace of \\(\mathbb{F}^3\\).
+
+* \\((0, 0, 0) \in U\\) since \\(0 = 5(0)\\).
+
+    For some \\((x, y, z), (a, b, c) \in U\\), \\((x, y, z) + (a, b, c) = (x + a, y + b, z + c)\\), and \\(x + a = 5z + 5c = 5(z + c)\\), hence \\((x + a, y + b, z + c) \in U\\).
+
+    For some \\(a \in \mathbb{F}\\) and \\((x, y ,z) \in U\\), \\(a(x, y, z) = (ax, ay, az)\\) and \\(ax = a(5z) = 5(az)\\), hence \\((ax, ay, az) \in U\\).
+
+    Hence, \\(\\{(x_1, x_2, x_3) \in \mathbb{F}^3 : x_1 = 5x_3\\}\\) is a subspace of \\(\mathbb{F}^3\\).
 
 ### Exercise 1C.2
 Verify all assertions about subspaces in Example 1.35.
+
+### Solution:
+* Since \\(\\{(x_1, x_2, x_3, x_4) \in \mathbb{F}^4 : x_3 = 5x^4 + b\\}\\) is a subspace of \\(\mathbb{F}^4\\),
+
+    \\((0, 0, 0, 0) \in U\\), hence \\(0 = 5(0) + b\\), implying that \\(b = 0\\).
+
+    Since \\(b = 0\\),
+    
+    \\(x_3 = 0 = 5(0) = 5(0) + 0 = 5x_4 + b\\), hence \\((0, 0, 0, 0) \in U\\).
+
+    For some \\((w, x, y, z), (a, b, c, d) \in U\\), \\((w, x, y, z) + (a, b, c, d) = (w + a, x + b, y + c, z + d)\\), and \\((y + c) = (5z + 5d) = 5(z = d) \\).
+
+    For some \\(a \in \mathbb{F}\\) and \\((x, y ,z) \in U\\), \\(a(x, y, z) = (ax, ay, az)\\) and
+
+    Hence, \\(\\{(x_1, x_2, x_3, x_4) \in \mathbb{F}^4 : x_3 = 5x^4 + b\\}\\) is a subspace of \\(\mathbb{F}^4\\).
+
+    Hence, \\(\\{(x_1, x_2, x_3, x_4) \in \mathbb{F}^4 : x_3 = 5x^4 + b\\}\\) is a subspace of \\(\mathbb{F}^4\\) if and only if \\(b = 0\\).
+
+* Let \\(\\{f(x) = 0 : x \in [0, 1]\\}\\) be the additive identity, and \\(f \in U\\).
+
+    For some \\(f, g \in U\\), \\((f + g)(x) = f(x) + g(x)\\).
+
+### Exercise 1C.3
+Show that the set of differentiable real-valued functions \\(f\\) on the interval \\((-4, 4)\\) such that \\(f'(-1) = 3f(2)\\) is a subspace of \\(\mathbb{R}^{(-4, 4)}\\).
+
+### Solution:
+
+### Exercise 1C.4
+Suppose \\(b \in \mathbb{R}\\). Show that the set of continuous real-valued functions \\(f\\) on the interval \\([0, 1]\\) such that \\(\int_{0}^{1} f = b\\) is a subspace of \\(\mathbb{R}^{[0, 1]}\\) if and only if \\(b = 0\\).
+
+### Solution:
+
+### Exercise 1C.5
+Is \\(\mathbb{R}^2\\) a subspace of the complex vector space \\(\mathbb{C}\\)?
 
 ### Solution:
 
@@ -813,3 +859,25 @@ $$
 $$.
 
 ### Solution:
+\\((1, -0.5, -0.5), (-0.5, 1, -0.5), (-0.5, -0.5, 1), (0, 0, 0)\\).
+
+For any vector in the span:
+<br><br>
+$$
+\begin{align}
+x + y + z &= (a + b(-0.5) + c(-0.5) + d(0)) + (a(-0.5) + b + c(-0.5) + d(0)) + (a(-0.5) + b(-0.5) + c + d(0)) \\
+            &= a - 0.5a - 0.5a + b - 0.5b - 0.5b + c - 0.5c - 0.5c \\
+            &= 0
+\end{align}
+$$
+
+### Exercise 2A.2
+Prove or give a counterexample: If \\(v_1, v_2, v_3, v_4\\) spans \\(V\\), then the list
+<br><br>
+$$
+v_1 - v_2, v_2 - v_3, v_3 - v_4, v_4
+$$
+
+also spans \\(V\\).
+
+### Solution
