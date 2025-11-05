@@ -60,6 +60,12 @@ Let \\(a, b, c\\) be natural numbers, we want to prove that:
 
     This closes the induction.
 
+    *Lemma: For any natural numbers \\(n\\) and \\(m\\), \\(n + m\\) is a natural number.*
+
+    Using induction on n, for the base case, \\(0 + m = m\\) (by definition of addition) and since \\(m\\) is a natural number, \\(0 + m\\) is a natural number. We assume inductively that \\(n + m\\) is a natural number. We now look at \\(n\text{++} + m\\), which is \\((n + m)\text{++}\\) (by definition of addition). By the inductive step and Axiom 2.2, we know that \\((n + m)\text{++}\\) is a natural number.
+
+    This closes the induction.
+
 -   (Order is antisymmetric) If \\(a \geq b\\) and \\(b \geq a\\), then \\(a = b\\).
 
     If \\(a \geq b\\), then it implies \\(a = b + d\\) for some natural number \\(d\\), and if \\(b \geq a\\), then it implies \\(b = a + e\\) for some natural number \\(e\\). This also implies that:
@@ -76,3 +82,30 @@ Let \\(a, b, c\\) be natural numbers, we want to prove that:
     and this implies that \\(e = 0\\) and \\(d = 0\\) (by Corollary 2.2.9), and that \\(a = b + 0\\), and \\(a = b\\) (by Lemma 2.2.2).
 
 -   (Addition preserves order) \\(a \geq b\\) if and only if \\(a + c \geq b + c\\).
+
+    We will prove the forward direction first. \\(a \geq b\\) implies \\(a = b + d\\) for some natural number \\(d\\) (by definition of ordering of natural numbers). We then get \\(a + c = (b + d) + c\\), which then implies \\(a + c = (b + c) + d\\) (by commutativity of addition and associativity of addition), which finally shows \\(a + c \geq b + c\\).
+
+    We will now prove the other direction. \\(a + c \geq b + c\\) implies \\(a + c = (b + c) + d\\) for some natural number \\(d\\) (by definition of ordering of natural numbers). We can show that \\(a + c = (b + d) + c\\) (by commutativity of addition and associativity of addition), and then \\(a = b + d\\) (by cancellation law), which finally shows \\(a \geq b\\).
+
+-   \\(a < b\\) if and only if \\(a\text{++} \leq b\\).
+
+    We will prove the forward direction first. \\(a < b\\) implies \\(b = a + d\\) and \\(a \neq b\\) for some natural number \\(d\\) (by definition of ordering of natural numbers). Since \\(a \neq b\\), it implies that \\(d \neq 0\\), else it will contradict Lemma 2.2.2. Hence, we know that \\(d\\) is a postive number (by definition of positive natural numbers) and it implies that there exists some natural number \\(e\\) such that \\(e\text{++} = d\\) (by Lemma 2.2.10). Hence, \\(b = a + e\text{++}\\), which implies \\(b = (a + e)\text{++}\\) (by Lemma 2.2.3), and \\(b = a\text{++} + e\\) (by definition of addition), which finally shows \\(a\text{++} \leq b\\).
+
+    We will now prove the other direction. \\(a\text{++} \leq b\\) implies \\(b = a\text{++} + d\\) for some natural number \\(d\\) (by definition of ordering of natural numbers), which implies \\(b = (a + d)\text{++}\\) (by definition of addition), and \\(b = a + d\text{++}\\) (by Lemma 2.2.3), which finally shows \\(a \leq b\\). By Axiom 2.3, we know that \\(d\text{++} \neq 0\\) and hence \\(a \neq b\\). We prove it by contradictation, assume that \\(a = b\\), hence \\(b = b + d\text{++}\\), and \\(0 = d\text{++}\\) (by cancellation law) which leads to a contradiction and showing that \\(a \neq b\\). Finally, we show that \\(a < b\\).
+
+-   \\(a < b\\) if and only if \\(b = a + d\\) for some positive number \\(d\\).
+
+
+
+## Exercise 2.2.4
+Justify the three statements marked (why?) in the proof of Proposition 2.2.13.
+
+-   When \\(a = 0\\) we have \\(0 \leq b\\) for all \\(b\\)
+
+-   If \\(a > b\\), then \\(a\text{++} > b\\)
+
+-   If \\(a = b\\), then \\(a\text{++} \leq b\\)
+
+## Solution:
+
+# Chapter 3: Set Theory
