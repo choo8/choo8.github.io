@@ -89,22 +89,49 @@ Let \\(a, b, c\\) be natural numbers, we want to prove that:
 
 -   \\(a < b\\) if and only if \\(a\text{++} \leq b\\).
 
-    We will prove the forward direction first. \\(a < b\\) implies \\(b = a + d\\) and \\(a \neq b\\) for some natural number \\(d\\) (by definition of ordering of natural numbers). Since \\(a \neq b\\), it implies that \\(d \neq 0\\), else it will contradict Lemma 2.2.2. Hence, we know that \\(d\\) is a postive number (by definition of positive natural numbers) and it implies that there exists some natural number \\(e\\) such that \\(e\text{++} = d\\) (by Lemma 2.2.10). Hence, \\(b = a + e\text{++}\\), which implies \\(b = (a + e)\text{++}\\) (by Lemma 2.2.3), and \\(b = a\text{++} + e\\) (by definition of addition), which finally shows \\(a\text{++} \leq b\\).
+    We will prove the forward direction first. \\(a < b\\) implies \\(b = a + d\\) for some natural number \\(d\\) (by definition of ordering of natural numbers) and \\(a \neq b\\). Since \\(a \neq b\\), it implies that \\(d \neq 0\\), else it will contradict Lemma 2.2.2. Hence, we know that \\(d\\) is a postive number (by definition of positive natural numbers) and it implies that there exists some natural number \\(e\\) such that \\(e\text{++} = d\\) (by Lemma 2.2.10). Hence, \\(b = a + e\text{++}\\), which implies \\(b = (a + e)\text{++}\\) (by Lemma 2.2.3), and \\(b = a\text{++} + e\\) (by definition of addition), which finally shows \\(a\text{++} \leq b\\).
 
     We will now prove the other direction. \\(a\text{++} \leq b\\) implies \\(b = a\text{++} + d\\) for some natural number \\(d\\) (by definition of ordering of natural numbers), which implies \\(b = (a + d)\text{++}\\) (by definition of addition), and \\(b = a + d\text{++}\\) (by Lemma 2.2.3), which finally shows \\(a \leq b\\). By Axiom 2.3, we know that \\(d\text{++} \neq 0\\) and hence \\(a \neq b\\). We prove it by contradictation, assume that \\(a = b\\), hence \\(b = b + d\text{++}\\), and \\(0 = d\text{++}\\) (by cancellation law) which leads to a contradiction and showing that \\(a \neq b\\). Finally, we show that \\(a < b\\).
 
 -   \\(a < b\\) if and only if \\(b = a + d\\) for some positive number \\(d\\).
 
+    We will prove the forward direction first. \\(a < b\\) implies \\(b = a + d\\) for some natural number \\(d\\) (by definition of ordering of natural numbers) and \\(a \neq b\\). Since \\(a \neq b\\), we know that \\(d \neq 0\\) (by above), hence \\(d\\) is a positive number (by definition of positive natural numbers).
 
+    We will now prove the other direction. We assume that \\(b = a\\), hence by cancellation law, \\(0 = d\\), but since we know that \\(d\\) is a positive number, \\(d \neq 0\\) and which leads to a contradiction, showing that \\(b \neq a\\). Since \\(b = a + d\\) for some natural number \\(d\\) and \\(b \neq a\\), we can show that \\(a < b\\) (by definition of ordering of natural numbers).
 
 ## Exercise 2.2.4
 Justify the three statements marked (why?) in the proof of Proposition 2.2.13.
 
+## Solution:
 -   When \\(a = 0\\) we have \\(0 \leq b\\) for all \\(b\\)
+
+    Since \\(b = 0 + b\\) (by definition of addition) and \\(b\\) is a natural number, it implies that \\(0 \leq b\\) (by definition of ordering of natural numbers).
 
 -   If \\(a > b\\), then \\(a\text{++} > b\\)
 
--   If \\(a = b\\), then \\(a\text{++} \leq b\\)
+    If \\(a > b\\), then \\(a = b + d\\) for some natural number \\(d\\) and \\(a \neq b\\) (by definition of ordering of natural numbers). Hence \\(a\text{++} = (b + d)\text{++}\\), which implies \\(a\text{++} = b + d\text{++}\\) (by Lemma 2.2.3). Let's assume that \\(a\text{++} = b\\), it then implies \\(0 = d\text{++}\\) (by cancellation law), which leads to a contradiction (by Axiom 2.3), showing that \\(a\text{++} \neq b\\). Hence, \\(a\text{++} > b\\).
+
+-   If \\(a = b\\), then \\(a\text{++} > b\\)
+
+    Since \\(a = b\\), then \\(a\text{++} = b\text{++}\\) and \\(a\{++} = b + 1\\) (by Lemma 2.2.2 and Lemma 2.2.3). Assume that \\(a\text{++} = b\\), it implies \\(b\text{++} = b\\), then \\(b + 1 = b\\) (by Lemma 2.2.2 and Lemma 2.2.3), which implies \\(1 = 0\\) (by Lemma 2.2.2 and cancellation law), which implies \\(0\text{++} = 0\\), which leads to a contradiction (by Axiom 2.3), showing that \\(a\text{++} \neq b\\). Hence, \\(a\text{++} > b\\).
+
+## Exercise 2.2.5
+Prove Proposition 2.2.14.
+
+## Solution:
+Let \\(m_0\\) be a natural number, and let \\(P(m)\\) be a property pertraining to an arbitrary natural number \\(m\\). We then define \\(Q(n)\\) to be the property that \\(P(m)\\) is true for all \\(m_0 \leq m < n\\).
+
+We look at the base case \\(Q(0)\\). Since \\(m_0 = 0 + m_0\\) (by definition of addition), we know that \\(0 \leq m_0\\) (by ordering of the natural numbers), hence \\(Q(0)\\) is vacuously true (by trichotomy of ordering for natural numbers). We now assume inductively that \\(Q(n)\\) is true, and look at \\(Q(n\text{++})\\). Since \\(Q(n\text{++}) = P(m)\\) for all \\(m_0 \leq m < n\text{++}\\), we know that \\(P(m)\\) is true for all \\(m_0 \leq m < n\\) (by inductive step), and \\(P(n)\\) is also true (by assumption in Proposition 2.2.14), hence we can see that \\(Q(n\text{++})\\) is true.
+
+This closes the induction, showing that \\(P(m)\\) is true for all natural numbers \\(m \geq m_0\\).
+
+## Exercise 2.2.6
+Let \\(n\\) be a natural number, and let \\(P(m)\\) be a property pertaining to the natural numbers such that whenever \\(P(m\text{++})\\) is true, then \\(P(m)\\) is true. Suppose that \\(P(n)\\) is also true. Prove that \\(P(m)\\) is true for all natural numbers \\(m \leq n\\); this is known as the *principle of backwards induction*.
+
+## Solution:
+
+## Exercise 2.2.7
+Let \\(n\\) be a natural number, and let \\(P(m)\\) be a property pertaining to the natural numbers such that whenever \\(P(m)\\) is true, \\(P(m\text{++})\\) is true. Show that if \\(P(n)\\) is true, then \\(P(m)\\) is true for all \\(m \leq n\\).
 
 ## Solution:
 
