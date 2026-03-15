@@ -17,7 +17,7 @@ $$
 \alpha + \beta &= (a + bi) + (c + di) && \text{ where } a, b, c, d \in \mathbb{R} \\
                 &= (a + c) + (b + d)i && \text{ by definition of addition on } \mathbb{C} \\
                 &= (c + a) + (d + b)i && \text{ commutativity of addition on } \mathbb{R} \\
-                &= (c + di) + (a + bi) && \text{ by definiton of addition on } \mathbb{C} \\
+                &= (c + di) + (a + bi) && \text{ by definition of addition on } \mathbb{C} \\
                 &= \beta + \alpha
 \end{align}
 $$
@@ -28,8 +28,8 @@ Show that \\((\alpha + \beta) + \lambda = \alpha + (\beta + \lambda)\\) for all 
 ### Solution:
 $$
 \begin{align}
-(\alpha + \beta) + \lambda &= ((a + bi) + (c + di)) + e + fi && \text{ where } a, b, c, d, e, f \in \mathbb{R} \\
-                            &= ((a + c) + (b + d)i) + e + fi && \text{ by definition of addition on } \mathbb{C} \\
+(\alpha + \beta) + \lambda &= ((a + bi) + (c + di)) + (e + fi) && \text{ where } a, b, c, d, e, f \in \mathbb{R} \\
+                            &= ((a + c) + (b + d)i) + (e + fi) && \text{ by definition of addition on } \mathbb{C} \\
                             &= ((a + c) + e) + ((b + d) + f)i && \text{ by definition of addition on } \mathbb{C} \\
                             &= (a + (c + e)) + (b + (d + f))i && \text{ associativity of addition on } \mathbb{R} \\
                             &= a + bi + ((c + e) + (d + f)i) && \text{ by definition of addition on } \mathbb{C} \\
@@ -75,6 +75,8 @@ $$
 Show that for every \\(\alpha \in \mathbb{C}\\), there exists a unique \\(\beta \in \mathbb{C}\\) such that \\(\alpha + \beta = 0\\).
 
 ### Solution:
+For any \\(\alpha \in \mathbb{C}\\), since \\(\alpha = a + bi\\) where \\(a, b \in \mathbb{R}\\), there exists \\(-a, -b \in \mathbb{R}\\) where \\(a + (-a) = 0\\) and \\(b + (-b) = 0\\) (additive inverse on \\(\mathbb{R}\\)), hence \\(\beta = -a - bi\\) where \\(\alpha + \beta = a + bi + (-a - bi) = (a + (-a)) + (b + (-b))i = 0\\).
+
 Assume that for some \\(\alpha \in \mathbb{C}\\), there exists \\(\beta, \lambda \in \mathbb{C}\\) such that \\(\alpha + \beta = 0\\) and \\(\alpha + \lambda = 0\\).
 <br><br>
 $$
@@ -119,6 +121,8 @@ and this contradicts the original assumption that for some \\(\alpha \in \mathbb
 Show that for every \\(\alpha \in \mathbb{C}\\) with \\(\alpha \neq 0\\), there exists a unique \\(\beta \in \mathbb{C}\\) such that \\(\alpha\beta = 1\\).
 
 ### Solution:
+Since \\(\alpha \neq 0\\), hence \\(\alpha = a + bi\\) where \\(a, b \in \mathbb{R}\\) and \\(a \neq 0\\) or \\(b \neq 0\\). If \\(b = 0\\), then there exists some \\(\frac{1}{a}\\) such that \\(a(\frac{1}{a}) = 1\\) (multiplicative inverse on \\(\mathbb{R}\\)). Similarly for the case where \\(a = 0\\). If both \\(a \neq 0\\) and \\(b \neq 0\\), then \\((a + bi)(\frac{a}{a^2 + b^2} - \frac{b}{a^2 + b^2}i) = \frac{a^2 + abi - abi + b^2}{a^2 + b^2} = 1\\).
+
 Assume that for some \\(\alpha \in \mathbb{C}\\), where \\(\alpha \neq 0\\), there exists \\(\beta, \lambda \in \mathbb{C}\\) such that \\(\alpha\beta = 1\\) and \\(\alpha\lambda = 1\\).
 <br><br>
 $$
@@ -144,7 +148,7 @@ $$
 (ad + bc) &= (af + be) \\
 ad - af &= be - bc && \text{ additive inverse on } \mathbb{R} \\
 a(d - f) &= b(e - c) && \text { distributive property of } \mathbb{R} \\
-a(d - f) &= -b(c - e) && \text{ multiplicative inverse on } \mathbb{R} \text { and } (-1)(-1) = 1
+a(d - f) &= -b(c - e) && \text{ additive inverse on } \mathbb{R} \text { and } (-1)(-1) = 1
 \end{align}
 $$
 
@@ -189,7 +193,7 @@ $$
 
 Since we know that \\(\alpha \neq 0\\), we know that at least \\(a\\) or \\(b\\) will be non-zero, and \\(a^2 + b^2 \neq 0\\). This would mean that \\(d - f = 0\\).
 
-This would mean that \\(c = e\\) and \\(d = f\\), which implies that \\(\alpha = \lambda\\), which contradicts the original assumption that for some \\(\alpha \in \mathbb{C}\\), where \\(\alpha \neq 0\\), there exists \\(\beta, \lambda \in \mathbb{C}\\) such that \\(\alpha\beta = 1\\) and \\(\alpha\lambda = 1\\).
+This would mean that \\(c = e\\) and \\(d = f\\), which implies that \\(\beta = \lambda\\), which contradicts the original assumption that for some \\(\alpha \in \mathbb{C}\\), where \\(\alpha \neq 0\\), there exists \\(\beta, \lambda \in \mathbb{C}\\) such that \\(\alpha\beta = 1\\) and \\(\alpha\lambda = 1\\).
 
 ### Exercise 1A.7
 Show that \\(\frac{-1 + \sqrt{3}i}{2}\\) is a cube root of 1 (meaning that its cube equals 1).
@@ -257,14 +261,7 @@ a &= \pm\frac{\sqrt{2}}{2}
 \end{align}
 $$
 
-Hence,
-<br><br>
-$$
-\begin{align}
-i &= \frac{\sqrt{2}}{2} + \frac{1}{\sqrt{2}}i \\
-    &= -\frac{\sqrt{2}}{2} - \frac{1}{\sqrt{2}}i
-\end{align}
-$$
+Hence, the 2 square roots of \\(i\\) are \\(\frac{\sqrt{2}}{2} + \frac{1}{\sqrt{2}}i\\) and \\(-\frac{\sqrt{2}}{2} - \frac{1}{\sqrt{2}}i\\).
 
 ### Exercise 1A.9
 Find \\(x \in \mathbb{R}^4\\) such that
@@ -294,8 +291,8 @@ Assume that there exists some \\(\lambda \in \mathbb{C}\\) such that \\(\lambda(
 <br><br>
 $$
 \begin{align}
-\lambda(2 - 3i) &= 12 - 51\\
-(a + bi)(2 - 3) &= 12 - 5i \\
+\lambda(2 - 3i) &= 12 - 5i\\
+(a + bi)(2 - 3i) &= 12 - 5i \\
 (2a + 3b) + (-3a + 2b)i &= 12 - 5i 
 \end{align}
 $$
@@ -314,8 +311,8 @@ Solving the equations,
 $$
 \begin{align}
 a &= 6 - \frac{3b}{2} \\
--3(\frac{3b}{2}) + 2b &= -5 \\
--9b + 4b &= -10 \\
+-3(6 - \frac{3b}{2}) + 2b &= -5 \\
+-36 + 9b + 4b &= -10 \\
 b &= 2 \\
 a &= 6 - \frac{(3)(2)}{2} \\
     &= 3
@@ -388,7 +385,7 @@ $$
 \begin{align}
 \lambda(x + y) &= \lambda((x_1, \ldots, x_n) + (y_1, \ldots, y_n)) && \\
                 &= \lambda(x_1 + y_1, \ldots, x_n + y_n) && \\
-                &= (\lambda(x_1 + y_n), \ldots, \lambda(x_n + y_n)) && \\
+                &= (\lambda(x_1 + y_1), \ldots, \lambda(x_n + y_n)) && \\
                 &= (\lambda x_1 + \lambda y_1, \ldots, \lambda x_n + \lambda y_n) && \text{ distributive property on } \mathbb{F} \\
                 &= (\lambda x_1, \ldots, \lambda x_n) + (\lambda y_1, \ldots, \lambda y_n) && \\
                 &= \lambda(x_1, \ldots, x_n) + \lambda(y_1, \ldots, y_n) && \\
@@ -422,7 +419,7 @@ $$
 -(-v) &= -(-v) + 0 && \text{ additive identity on } V \\
         &= -(-v) + (v + -v) && \text{ unique additive inverse on } V \\
         &= -(-v) + (-v + v) && \text{ commutativity of addition on } V \\
-        &= (-(-v) + -v) + v && \text{ distributive property of } V \\
+        &= (-(-v) + -v) + v && \text{ associativity of addition of } V \\
         &= v
 \end{align}
 $$
@@ -447,6 +444,8 @@ Hence, this contradicts the original assumption that both \\(a \neq 0\\) and \\(
 Suppose \\(v, w \in V\\). Explain why there exists a unique \\(x \in V\\) such that \\(v + 3x = w\\). 
 
 ### Solution:
+Since \\(v, w \in V\\), hence \\(x = \frac{w}{3} - \frac{v}{3} \in V\\) (closed by multiplication on \\(\mathbb{F}\\) and addition on \\(V\\)). We can see that \\(v + 3(\frac{w}{3} - \frac{v}{3}) = v + w - v = w\\).
+
 Suppose there exist \\(x, x' \in V\\) such that \\(v + 3x = w\\) and \\(v + 3x' = w\\).
 <br><br>
 $$
@@ -483,7 +482,7 @@ $$
 0v &= 0 && \\
 (1 + -1)v &= 0 && \text{ additive inverse on } \mathbb{F} \\
 1v + (-1)(v) &= 0 && \text{ distributive property of } V \\
-v + -v &= 0 && \text{ multiplicative inverse on } \mathbb{F}
+v + -v &= 0 && \text{ multiplicative identity on } \mathbb{F}
 \end{align}
 $$
 
@@ -622,7 +621,7 @@ for all \\(x \in S\\).
 
 Multiplicative identity:
 
-Let the multiplicative identity be \\(1 \in S\\).
+Let the multiplicative identity be \\(1 \in F\\).
 <br><br>
 $$
 \begin{align}
@@ -635,7 +634,7 @@ for all \\(x \in S\\).
 
 Distributive properties:
 
-For any \\(f, g \in V^S\\) and \\(a, b \in S\\),
+For any \\(f, g \in V^S\\) and \\(a, b \in F\\),
 <br><br>
 $$
 \begin{align}
@@ -700,7 +699,7 @@ $$
 \begin{align}
 ((a + bi) + (c + di)) + (u + vi) &= ((a + c) + (b + d)i) + (u + vi) && \\
                                     &= ((a + c) + u) + ((b + d) + v)i && \\
-                                    &= (a + (c + u)) + (b + (d + v))i && \text{ associativity of addition on } \mathbb{R} \\
+                                    &= (a + (c + u)) + (b + (d + v))i && \text{ associativity of addition on } V \\
                                     &= (a + bi) + ((c + u) + (d + v)i) && \\
                                     &= (a + bi) + ((c + di) + (u + vi))
 \end{align}
@@ -777,7 +776,7 @@ $$
 \end{align}
 $$
 
-Hence \\(V^\mathbb{C}\\) is a vector space with those definitions of addition and scalar multiplication.
+Hence \\(V_\mathbb{C}\\) is a vector space with those definitions of addition and scalar multiplication.
 
 ## Chapter 1C: Subspaces
 
@@ -813,7 +812,7 @@ For each of the following subsets of \\(\mathbb{F}^3\\), determine whether it is
 Verify all assertions about subspaces in Example 1.35.
 
 ### Solution:
-* Since \\(\\{(x_1, x_2, x_3, x_4) \in \mathbb{F}^4 : x_3 = 5x^4 + b\\}\\) is a subspace of \\(\mathbb{F}^4\\),
+* Since \\(\\{(x_1, x_2, x_3, x_4) \in \mathbb{F}^4 : x_3 = 5x_4 + b\\}\\) is a subspace of \\(\mathbb{F}^4\\),
 
     \\((0, 0, 0, 0) \in U\\), hence \\(0 = 5(0) + b\\), implying that \\(b = 0\\).
 
@@ -821,13 +820,13 @@ Verify all assertions about subspaces in Example 1.35.
     
     \\(x_3 = 0 = 5(0) = 5(0) + 0 = 5x_4 + b\\), hence \\((0, 0, 0, 0) \in U\\).
 
-    For some \\((w, x, y, z), (a, b, c, d) \in U\\), \\((w, x, y, z) + (a, b, c, d) = (w + a, x + b, y + c, z + d)\\), and \\((y + c) = (5z + 5d) = 5(z = d) \\).
+    For some \\((w, x, y, z), (a, b, c, d) \in U\\), \\((w, x, y, z) + (a, b, c, d) = (w + a, x + b, y + c, z + d)\\), and \\((y + c) = (5z + 5d) = 5(z + d) \\).
 
-    For some \\(a \in \mathbb{F}\\) and \\((x, y ,z) \in U\\), \\(a(x, y, z) = (ax, ay, az)\\) and
+    For some \\(a \in \mathbb{F}\\) and \\((w, x, y ,z) \in U\\), \\(a(w, x, y, z) = (aw, ax, ay, az)\\) and \\(ay = a(5z + 0) = 5(az) + 0\\), hence \\((aw, ax, ay, az) \in U\\).
 
-    Hence, \\(\\{(x_1, x_2, x_3, x_4) \in \mathbb{F}^4 : x_3 = 5x^4 + b\\}\\) is a subspace of \\(\mathbb{F}^4\\).
+    Hence, \\(\\{(x_1, x_2, x_3, x_4) \in \mathbb{F}^4 : x_3 = 5x_4 + b\\}\\) is a subspace of \\(\mathbb{F}^4\\).
 
-    Hence, \\(\\{(x_1, x_2, x_3, x_4) \in \mathbb{F}^4 : x_3 = 5x^4 + b\\}\\) is a subspace of \\(\mathbb{F}^4\\) if and only if \\(b = 0\\).
+    Hence, \\(\\{(x_1, x_2, x_3, x_4) \in \mathbb{F}^4 : x_3 = 5x_4 + b\\}\\) is a subspace of \\(\mathbb{F}^4\\) if and only if \\(b = 0\\).
 
 * Let \\(\\{f(x) = 0 : x \in [0, 1]\\}\\) be the additive identity, and \\(f \in U\\).
 
