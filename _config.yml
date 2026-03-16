@@ -1,11 +1,14 @@
-title: My Study Log
+title: "choo8's notes"
 author: choo8
-description: "A collection of solved exercises from math and computer science textbooks."
+description: "Solved exercises and technical write-ups on math, CS, and ML."
 theme: minima
 
 header_pages:
   - textbooks.md
+  - articles.md
 
 collections:
   textbooks:
+    output: true
+  articles:
     output: true

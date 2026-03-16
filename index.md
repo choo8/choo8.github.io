@@ -2,8 +2,8 @@
 layout: default
 ---
 
-# Welcome to My Study Log
+# Welcome to choo8's notes
 
-This site contains my solutions and notes for exercises from various math and computer science textbooks.
+This site contains solved exercises from math and CS textbooks, along with deep-dive articles on machine learning.
 
-Use the navigation lists above to select a subject and textbook.
+Use the navigation above to browse textbooks or articles.
